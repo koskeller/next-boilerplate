@@ -1,3 +1,5 @@
+import { Container } from "@/components/container";
+
 export default function Page() {
-  return <div>Hello</div>;
+  return <Container>Hello world</Container>;
 }
