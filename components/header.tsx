@@ -1,6 +1,6 @@
 import { HEADER_NAV, SITE_NAME } from "@/lib/const";
-import { Rocket } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "./container";
 
 export async function Header() {
@@ -11,10 +11,16 @@ export async function Header() {
           <div className="flex items-center gap-5 lg:gap-6">
             <Link
               href="/"
-              className="flex items-center gap-2 text-lg font-semibold md:text-base"
+              className="flex items-center gap-3 text-xl font-semibold"
             >
-              <Rocket className="h-6 w-6" />
-              <span className="sr-only">{SITE_NAME}</span>
+              <Image
+                src="/logo.png"
+                alt={SITE_NAME}
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+              <span className="font-cal-sans">{SITE_NAME}</span>
             </Link>
             {HEADER_NAV.map((nav) => (
               <Link
